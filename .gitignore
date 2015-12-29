@@ -1,47 +1,17 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+recognitionApp/built
+LPRProject_Schedule.xlsx
+server/node_modules
+server/uploads
+server/plate
+localisationApp/built
+localisationApp/picture/
 
-# Folder config file
-Desktop.ini
+webApp/vendor/angular/.svn/all-wcprops
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+webApp/vendor/angular/.svn/entries
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+*.svn-base
 
-# Windows shortcuts
-*.lnk
+*.cpp#
 
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+*.txt

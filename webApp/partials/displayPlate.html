@@ -1,0 +1,54 @@
+<div ng-controller="editPlateCtrl">
+  <!-- Controlls, TODO : Add functionalities !-->
+  <div class="container">
+    <button class="btn btn-default" ng-click="back()">Back</button>
+
+    <button class="btn btn-info" ng-click="editPlate = !editPlate">Edit</button>
+
+    <button class="btn btn-success" ng-click="editPlate = !editPlate">Launch Recognition</button>
+
+    <button class="btn btn-danger">Remove</button>
+  </div>
+
+  <div>
+    <!-- Display Informations -->
+    <div class="col-sm-7" ng-if="!editPlate">
+      <h1>Plate Number : {{ data.selectedPlate.plate.number }}</h1>
+      <hr/>
+      <div>
+          <h2>Informations :</h2>
+      </div>
+    </div>
+    <!-- Edit Informations -->
+
+    <div class="col-sm-7" ng-if="editPlate">
+        <h1>Plate Number : <input type="text" ng-model="data.selectedPlate.plate.number" class="form-control"/></h1>
+        <hr/>
+        <h2>
+            Informations
+        </h2>
+
+        <h3> Cars </h3>
+        <textarea rows=3 class="form-control"></textarea>
+        <h3> Drivers </h3>
+        <textarea rows=3 class="form-control"></textarea>
+        <h3> Notes </h3>
+        <textarea rows=3 class="form-control"></textarea>
+
+        <hr/>
+
+        <button class="btn btn-success">Save</button>
+        <button class="btn btn-danger">Discards</button>
+
+    </div>
+
+    <!-- Image, TODO : Add diaporamas -->
+    <div class="col-sm-5">
+      <image class="col-sm-12" src="{{ 'http://localhost:8080/plate/' + data.selectedPlate._id + '/' + 'origin.jpg'}}"/>
+    </div>
+
+    <div class="spacer">  </div>
+
+  </div>
+
+</div>

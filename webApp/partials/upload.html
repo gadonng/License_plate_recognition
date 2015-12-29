@@ -1,0 +1,13 @@
+<div ng-controller="uploadCtrl">
+	<h1>Upload pictures</h1>
+
+	<upload-button
+  		class="btn btn-primary btn-upload"
+  		url="http://localhost:8080/plate"
+  		on-success="onUploadSuccess(response)">
+  		Upload
+  	</upload-button>
+  	<div>
+				<img src="{{ 'http://localhost:8080/plate/' + data.id + '/' + 'origin.jpg'}}">
+		</div>
+</div>

@@ -1,0 +1,44 @@
+<div ng-controller="plateListCtrl">
+  <table class="table table-striped col-sm-12">
+    <tr>
+      <th class="col-sm-1">Pictures</th>
+      <th class="col-sm-1">Chinese Char</th>
+      <th class="col-sm-2">Plate Number</th>
+      <th class="col-sm-6">Informations</th>
+      <th class="col-sm-1">Status</th>
+      <th class="col-sm-1">Actions</th>
+    </tr>
+    <tr ng-repeat="plate in data.plateList">
+      <td class="col-sm-1">
+        <image class="col-sm-12" src="{{ 'http://localhost:8080/plate/' + plate._id + '/' + 'origin.jpg'}}"/>
+      </td>
+      <td class="col-sm-1"> {{ plate._source.plateNumber.char }}</td>
+      <td class="col-sm-2"> {{ plate._source.plateNumber.number }}</td>
+      <td class="col-sm-6"> {{ plate._source.information }}</td>
+      <td class="col-sm-1"> {{ plate._source.status }}</td>
+      <td class="col-sm-1">
+        <button ng-click="editPlate($index)" class="btn btn-info">Edit</button>
+      </td>
+    <tr>
+  </table>
+  <div class="spacer"></div>
+  <div class="pager">
+    <ul class="pager pagination-result">
+      <li ng-class="{'disabled':data.page==0}">
+        <span class="link" ng-click="prev()">
+          <span class="glyphicon glyphicon-chevron-left">
+          </span>
+        </span>
+      </li>
+      <li class="disabled">
+        <span >{{ data.page  }} / {{ data.maxPage }}</span>
+      </li>
+      <li ng-class="{'disabled':data.page==data.maxPage}">
+        <span class="link" ng-click="next()">
+          <span class="glyphicon glyphicon-chevron-right">
+          </span>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>

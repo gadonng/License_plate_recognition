@@ -1,0 +1,12 @@
+{
+  "name": "PlateRecognitionServer",
+  "description": "Plate Recognition BJTU's project server side",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "4.x",
+    "connect":"~2.14.4",
+    "body-parser": "~1.0.1",
+    "elasticsearch" : "2.4"
+  }
+}
